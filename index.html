@@ -74,6 +74,32 @@
                 <br>
                 <center><h3>Benford Analysis of six datasets to determine fraudulent activity.<h3></center>
                 <br>
+                <b>Benford's Law states the first digit of numbers in some data sets is governed by
+
+                    ${tex`p_i = \log_{10}\left (1 + \frac{1}{i}\right)`}
+                    
+                    where ${tex`p_i`} is the probability of the digit ${tex`i \in [1...9]`}. The following table shows the expected probability for each digit.
+                    
+                    | ${tex`i`} | ${tex`p_i`}  |
+                    |---|----------|
+                    | 1 | 0.30103  |
+                    | 2 | 0.17609  |
+                    | 3 | 0.12494  |
+                    | 4 | 0.09691  |
+                    | 5 | 0.079181 |
+                    | 6 | 0.066947 |
+                    | 7 | 0.057992 |
+                    | 8 | 0.051153 |
+                    | 9 | 0.045757 |
+                    
+                    This "Law" is common enough that Benford's Law has been used to test for accounting fraud, government corruption, and the validity of scientific results, such as COVID-19 data.
+                    
+                    Not all data have this distribution, for Benford's law to hold data should
+                    
+                    - **have sufficient span** either a complete or several orders of magnitude in the data's span.
+                    - **have large enough sample size** random chance could make a few first digits non-Benford. If the data set is small enough (say 25 or less), this could have a significant impact on statistical tests for Benford distributions.
+                    - **be right skewed** often this is associated with some combinatory or self-organized aspect of the data. Right skew generally increases the span, returning us to the first expectation.
+                    - **not be human assigned** serial numbers or telephone numbers would not work.</b>
         <div class="flex-container">
             <div class="iframe-container">
                 <iframe width="100%" height="2000" frameborder="0"
