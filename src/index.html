@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>National Population Migration</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
         body {
             margin: 0;
@@ -74,25 +76,55 @@
                 <br>
                 <center><h3>Benford Analysis of six datasets to determine fraudulent activity.<h3></center>
                 <br>
-                <b>Benford's Law states the first digit of numbers in some data sets is governed by
+                <b>Benford's Law states the first digit of numbers in some data sets is governed by</b>
 
-                    ${tex`p_i = \log_{10}\left (1 + \frac{1}{i}\right)`}
+                <p>
+                    The equation \(p_i = \log_{10}\left (1 + \frac{1}{i}\right)\) defines the probability \(p_i\) of the digit \(i \in [1...9]\). The following table shows the expected probability for each digit.
+                </p>
+                <table border="1">
+                    <tr>
+                        <th>\(i\)</th>
+                        <th>\(p_i\)</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>0.30103</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>0.17609</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>0.12494</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>0.09691</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>0.079181</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>0.066947</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>0.057992</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>0.051153</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>0.045757</td>
+                    </tr>
+                </table>
                     
-                    where ${tex`p_i`} is the probability of the digit ${tex`i \in [1...9]`}. The following table shows the expected probability for each digit.
-                    
-                    | ${tex`i`} | ${tex`p_i`}  |
-                    |---|----------|
-                    | 1 | 0.30103  |
-                    | 2 | 0.17609  |
-                    | 3 | 0.12494  |
-                    | 4 | 0.09691  |
-                    | 5 | 0.079181 |
-                    | 6 | 0.066947 |
-                    | 7 | 0.057992 |
-                    | 8 | 0.051153 |
-                    | 9 | 0.045757 |
-                    
-                    This "Law" is common enough that Benford's Law has been used to test for accounting fraud, government corruption, and the validity of scientific results, such as COVID-19 data.
+                    <b>This "Law" is common enough that Benford's Law has been used to test for accounting fraud, government corruption, and the validity of scientific results, such as COVID-19 data.
                     
                     Not all data have this distribution, for Benford's law to hold data should
                     
